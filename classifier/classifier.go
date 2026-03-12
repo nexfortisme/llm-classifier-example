@@ -1,19 +1,26 @@
 package classifier
 
 import (
+	"fmt"
 	"github.com/nexfortisme/classifier-example/embedder"
 	"github.com/nexfortisme/classifier-example/store"
-	"fmt"
 )
 
 // Intent labels
 const (
-	IntentDirect    = "direct"
-	IntentNegative  = "negative"
-	IntentMeta      = "meta"
-	IntentAmbiguous = "ambiguous"
-	IntentUnknown   = "unknown"
-	IntentFollowup  = "followup"
+	IntentDirectRequest         = "direct_request"
+	IntentBotDirectedExplicit   = "bot_directed_explicit"
+	IntentBotDirectedByFollowup = "bot_directed_by_followup"
+	IntentIndirectRequest       = "indirect_request"
+	IntentMisdirected           = "misdirected"
+	IntentConversationStarter   = "conversation_starter"
+	IntentUnrelated             = "unrelated"
+	IntentAbstract              = "abstract"
+	IntentAmbiguous             = "ambiguous"
+	IntentPassive               = "passive"
+	IntentPositive              = "positive"
+	IntentNegative              = "negative"
+	IntentUtility               = "utility"
 )
 
 // Result is the output of a classification.

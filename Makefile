@@ -10,9 +10,9 @@ build:
 	go build -o $(BINARY_DIR)/classify ./cmd/classify
 	@echo "built bin/seed and bin/classify"
 
-# Phase 1: embed examples.json and save store.json
+# Phase 1: embed bart_intent_dataset_expanded.json and save store.json
 seed:
-	@$(BINARY_DIR)/seed examples.json store.json
+	@$(BINARY_DIR)/seed bart_intent_dataset_expanded.json store.json
 
 # Phase 2: interactive classifier loop
 classify:

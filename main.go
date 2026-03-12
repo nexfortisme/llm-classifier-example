@@ -1,11 +1,13 @@
 package main
 
 import (
-	"github.com/nexfortisme/classifier-example/embedder"
-	"github.com/nexfortisme/classifier-example/store"
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
+
+	"github.com/nexfortisme/classifier-example/embedder"
+	"github.com/nexfortisme/classifier-example/store"
 )
 
 type Example struct {
@@ -13,8 +15,67 @@ type Example struct {
 	Intent string `json:"intent"`
 }
 
+type bartMessage struct {
+	Turn int    `json:"turn"`
+	Text string `json:"text"`
+}
+
+type bartExample struct {
+	Type     string        `json:"type"`
+	Messages []bartMessage `json:"messages"`
+}
+
+type bartDataset struct {
+	Examples []bartExample `json:"examples"`
+}
+
+func loadExamples(path string) ([]Example, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("could not read %s: %w", path, err)
+	}
+
+	// Detect format: bart dataset is a JSON object with an "examples" key
+	var raw map[string]json.RawMessage
+	if err := json.Unmarshal(data, &raw); err == nil {
+		if _, ok := raw["examples"]; ok {
+			var ds bartDataset
+			if err := json.Unmarshal(data, &ds); err != nil {
+				return nil, fmt.Errorf("could not parse bart dataset %s: %w", path, err)
+			}
+			return convertBartDataset(ds), nil
+		}
+	}
+
+	// Fall back to flat array format
+	var examples []Example
+	if err := json.Unmarshal(data, &examples); err != nil {
+		return nil, fmt.Errorf("could not parse %s: %w", path, err)
+	}
+	return examples, nil
+}
+
+func convertBartDataset(ds bartDataset) []Example {
+	examples := make([]Example, 0, len(ds.Examples))
+	for _, ex := range ds.Examples {
+		var parts []string
+		for _, msg := range ex.Messages {
+			parts = append(parts, msg.Text)
+		}
+		examples = append(examples, Example{
+			Text:   strings.Join(parts, "\n"),
+			Intent: ex.Type,
+		})
+	}
+	return examples
+}
+
 func main() {
-	examplesPath := "examples.json"
+	// examplesPath := "bart_intent_dataset_expanded.json"
+	// examplesPath := "test_embeddings_chatbot_interaction_dataset.json"
+	// examplesPath := "test_embeddings_chatbot_interaction_dataset_v2.json"
+	// examplesPath := "test_embeddings_chatbot_interaction_dataset_v3_names_expanded.json"
+	examplesPath := "test_embeddings_chatbot_interaction_dataset_v4_discord_noisy.json"
 	storePath := "store.json"
 
 	if len(os.Args) > 1 {
@@ -24,16 +85,9 @@ func main() {
 		storePath = os.Args[2]
 	}
 
-	// -- Load examples --
-	data, err := os.ReadFile(examplesPath)
+	examples, err := loadExamples(examplesPath)
 	if err != nil {
-		fmt.Printf("error: could not read %s: %v\n", examplesPath, err)
-		os.Exit(1)
-	}
-
-	var examples []Example
-	if err := json.Unmarshal(data, &examples); err != nil {
-		fmt.Printf("error: could not parse %s: %v\n", examplesPath, err)
+		fmt.Printf("error: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -41,7 +95,8 @@ func main() {
 
 	// -- Set up embedder --
 	emb := embedder.NewLMStudio(
-		"http://127.0.0.1:1234",
+		// "http://127.0.0.1:1234",
+		"http://100.117.31.96:1234",
 		"text-embedding-nomic-embed-text-v1.5",
 	)
 
