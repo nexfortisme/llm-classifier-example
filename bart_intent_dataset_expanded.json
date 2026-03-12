@@ -1,0 +1,1525 @@
+{
+  "metadata": {
+    "description": "Intent classification dataset for Bart chatbot",
+    "version": "2.0",
+    "total_examples": 100,
+    "intent_types": [
+      "direct_request",
+      "indirect_request",
+      "conversation_starter",
+      "unrelated",
+      "abstract",
+      "bot_directed_explicit",
+      "bot_directed_by_followup",
+      "misdirected"
+    ],
+    "counts": {
+      "direct_request": 18,
+      "indirect_request": 12,
+      "conversation_starter": 10,
+      "unrelated": 10,
+      "abstract": 8,
+      "bot_directed_explicit": 14,
+      "bot_directed_by_followup": 16,
+      "misdirected": 12
+    }
+  },
+  "examples": [
+    {
+      "id": 1,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I need help resetting my password.",
+          "intent": "direct_request",
+          "notes": "Clear problem statement, no ambiguity"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "My account got locked out and I can't get back in.",
+          "intent": "direct_request",
+          "notes": "Problem framing with temporal context"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I've been trying to update my billing info for the past hour and it keeps failing.",
+          "intent": "direct_request",
+          "notes": "Frustration signal + repeated attempt = high confidence direct request"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "How do I export my data?",
+          "intent": "direct_request",
+          "notes": "Simple how-to question, clear intent"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can someone walk me through the refund process?",
+          "intent": "direct_request",
+          "notes": "Addressed to 'someone' broadly, but still a clear request"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I got charged twice for the same invoice.",
+          "intent": "direct_request",
+          "notes": "Factual complaint, implies resolution is needed"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Where do I find my API key?",
+          "intent": "direct_request",
+          "notes": "Navigation/how-to question, clear intent"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I need to add a new user to my team but I don't see that option anywhere.",
+          "intent": "direct_request",
+          "notes": "Feature discovery + implied frustration"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can I downgrade my plan without losing my data?",
+          "intent": "direct_request",
+          "notes": "Pre-action clarification question"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "The app crashes every time I try to open a report.",
+          "intent": "direct_request",
+          "notes": "Bug report with reproducible trigger"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I need to update the email address on my account.",
+          "intent": "direct_request",
+          "notes": "Account management task, unambiguous"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "What's included in the Pro plan?",
+          "intent": "direct_request",
+          "notes": "Informational request about product"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I'm getting a 403 error when I try to access the admin panel.",
+          "intent": "direct_request",
+          "notes": "Technical error report, specific and actionable"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "How long does it take to process a cancellation?",
+          "intent": "direct_request",
+          "notes": "Process timeline question"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I submitted a support ticket three days ago and haven't gotten a response.",
+          "intent": "direct_request",
+          "notes": "Escalation signal, follow-up on unresolved issue"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is there a way to bulk import contacts?",
+          "intent": "direct_request",
+          "notes": "Feature inquiry, product knowledge request"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "My two-factor authentication stopped working after I got a new phone.",
+          "intent": "direct_request",
+          "notes": "Device change causing auth issue, common support scenario"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "type": "direct_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I want to transfer ownership of my account to someone else.",
+          "intent": "direct_request",
+          "notes": "Account ownership change request"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey Bart, can you help me cancel my subscription?",
+          "intent": "direct_request",
+          "notes": "Explicitly names bot, clear request"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, what are the current plan options?",
+          "intent": "direct_request",
+          "notes": "Explicit bot name, informational request"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "@Bart I submitted a ticket yesterday but haven't heard back.",
+          "intent": "direct_request",
+          "notes": "@ mention style, follow-up on prior action"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart can you look into why my invoice is wrong?",
+          "intent": "direct_request",
+          "notes": "Explicit bot name, investigative request"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey Bart — is there a way to disable email notifications?",
+          "intent": "direct_request",
+          "notes": "Casual address with feature question"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, I think I was overcharged this month.",
+          "intent": "direct_request",
+          "notes": "Billing dispute, bot named directly"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Quick question for Bart: do you support SSO?",
+          "intent": "direct_request",
+          "notes": "Third-person reference to bot within the message"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "@Bart what's the best way to reach a human agent?",
+          "intent": "direct_request",
+          "notes": "Bot asked to route to human, escalation intent"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, my teammate says they never got the invite I sent.",
+          "intent": "direct_request",
+          "notes": "Relay of third-party complaint, explicit bot address"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey Bart, does the free trial require a credit card?",
+          "intent": "direct_request",
+          "notes": "Pre-signup question, sales-adjacent"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart — I need to pause my account for a couple months, is that possible?",
+          "intent": "direct_request",
+          "notes": "Unusual account action, bot addressed with em dash"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hi Bart, can you confirm my cancellation went through?",
+          "intent": "direct_request",
+          "notes": "Confirmation request, polite greeting before bot name"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart are you able to pull up order #8823?",
+          "intent": "direct_request",
+          "notes": "Specific record lookup, capability-checking framing"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "type": "bot_directed_explicit",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, what happens if I miss a payment?",
+          "intent": "direct_request",
+          "notes": "Policy question, explicit bot address"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you help me with something?",
+          "intent": "ambiguous",
+          "notes": "Could be directed at bot or another user in chat"
+        },
+        {
+          "turn": 2,
+          "text": "Sorry, I was talking to Bart.",
+          "intent": "bot_directed_clarification",
+          "notes": "Retroactively confirms turn 1 was intended for the bot"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is there any way to get a refund on that charge?",
+          "intent": "ambiguous",
+          "notes": "Sounds like it could be directed at a human agent"
+        },
+        {
+          "turn": 2,
+          "text": "Oh wait, I was asking Bart, not you.",
+          "intent": "bot_directed_clarification",
+          "notes": "Redirect confirms original message was for bot"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Do you know when the outage will be resolved?",
+          "intent": "ambiguous",
+          "notes": "'You' is ambiguous in group chat context"
+        },
+        {
+          "turn": 2,
+          "text": "That was for Bart by the way.",
+          "intent": "bot_directed_clarification",
+          "notes": "Clarification turns ambiguous message into bot-directed request"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you pull up my account details?",
+          "intent": "ambiguous",
+          "notes": "Reasonable to assume a human agent might be addressed"
+        },
+        {
+          "turn": 2,
+          "text": "Not you Mike, I was talking to Bart.",
+          "intent": "bot_directed_clarification",
+          "notes": "Names both the human and the bot, fully disambiguates"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "What's the status on ticket #4821?",
+          "intent": "ambiguous",
+          "notes": "Could be directed at a human support agent"
+        },
+        {
+          "turn": 2,
+          "text": "Whoops, meant to ask Bart that.",
+          "intent": "bot_directed_clarification",
+          "notes": "Self-correcting redirect"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Do you have a record of my last payment?",
+          "intent": "ambiguous",
+          "notes": "Could be asking a human or the bot"
+        },
+        {
+          "turn": 2,
+          "text": "I was talking to Bart, sorry for the confusion.",
+          "intent": "bot_directed_clarification",
+          "notes": "Polite disambiguation, confirms bot intent"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you check if my upgrade went through?",
+          "intent": "ambiguous",
+          "notes": "Verification request, addressee unclear"
+        },
+        {
+          "turn": 2,
+          "text": "Bart, that question was for you.",
+          "intent": "bot_directed_clarification",
+          "notes": "Direct address in follow-up message"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "How long does onboarding usually take?",
+          "intent": "ambiguous",
+          "notes": "Could be asking a team member or the bot"
+        },
+        {
+          "turn": 2,
+          "text": "lol sorry that was for Bart not you",
+          "intent": "bot_directed_clarification",
+          "notes": "Informal tone, still a valid clarification"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is it possible to get an itemized receipt?",
+          "intent": "ambiguous",
+          "notes": "Billing question, no clear addressee"
+        },
+        {
+          "turn": 2,
+          "text": "Hey Bart — that one was directed at you.",
+          "intent": "bot_directed_clarification",
+          "notes": "Explicit redirect with casual tone"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "What integrations do you support?",
+          "intent": "ambiguous",
+          "notes": "'You' could mean the company, a person, or the bot"
+        },
+        {
+          "turn": 2,
+          "text": "I was asking Bart, not the team.",
+          "intent": "bot_directed_clarification",
+          "notes": "Distinguishes bot from team, confirms bot intent"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you reopen that ticket for me?",
+          "intent": "ambiguous",
+          "notes": "Action request with no clear addressee"
+        },
+        {
+          "turn": 2,
+          "text": "Talking to Bart on that one.",
+          "intent": "bot_directed_clarification",
+          "notes": "Short, informal clarification"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Are there any known issues right now?",
+          "intent": "ambiguous",
+          "notes": "Status question, often asked of support team or bot"
+        },
+        {
+          "turn": 2,
+          "text": "Bart — that was meant for you, not the group.",
+          "intent": "bot_directed_clarification",
+          "notes": "Distinguishes bot from group channel, explicit"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I think there's a bug in the reporting module.",
+          "intent": "ambiguous",
+          "notes": "Observation that implies a report, no explicit ask or addressee"
+        },
+        {
+          "turn": 2,
+          "text": "FYI Bart, that was aimed at you.",
+          "intent": "bot_directed_clarification",
+          "notes": "FYI framing with explicit bot address"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "My discount code isn't working at checkout.",
+          "intent": "ambiguous",
+          "notes": "Problem report without a named recipient"
+        },
+        {
+          "turn": 2,
+          "text": "Just to clarify, I was talking to Bart.",
+          "intent": "bot_directed_clarification",
+          "notes": "Explicit clarification with 'just to clarify' hedge"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is there a mobile app available?",
+          "intent": "ambiguous",
+          "notes": "Product availability question, could be asked of anyone"
+        },
+        {
+          "turn": 2,
+          "text": "Directed at Bart, not asking the room.",
+          "intent": "bot_directed_clarification",
+          "notes": "Clear disambiguation between bot and room"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "type": "bot_directed_by_followup",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "How do I switch between workspaces?",
+          "intent": "ambiguous",
+          "notes": "How-to question, no explicit addressee"
+        },
+        {
+          "turn": 2,
+          "text": "Oops — Bart, that was for you.",
+          "intent": "bot_directed_clarification",
+          "notes": "Self-correction with casual tone"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey can you check on that for me?",
+          "intent": "ambiguous",
+          "notes": "Vague, no clear addressee"
+        },
+        {
+          "turn": 2,
+          "text": "I wasn't talking to Bart, I meant Sarah.",
+          "intent": "misdirected",
+          "notes": "Confirms message was NOT for the bot — bot should not respond"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you send me that file again?",
+          "intent": "ambiguous",
+          "notes": "File requests are typically between humans"
+        },
+        {
+          "turn": 2,
+          "text": "That wasn't for Bart lol, talking to Jake.",
+          "intent": "misdirected",
+          "notes": "Casual correction, bot should stand down"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Did you get a chance to review the doc I shared?",
+          "intent": "ambiguous",
+          "notes": "Document review request, likely human-to-human"
+        },
+        {
+          "turn": 2,
+          "text": "Not Bart — meant for the team.",
+          "intent": "misdirected",
+          "notes": "Bot explicitly excluded, message is for the team"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Are you free for a call later?",
+          "intent": "ambiguous",
+          "notes": "Calendar/availability question, almost certainly human-targeted"
+        },
+        {
+          "turn": 2,
+          "text": "Haha not Bart, asking you Dave.",
+          "intent": "misdirected",
+          "notes": "Humor signals this is obviously not bot-directed, names human"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "What did legal say about the contract?",
+          "intent": "ambiguous",
+          "notes": "Internal business question, unlikely to be bot-directed"
+        },
+        {
+          "turn": 2,
+          "text": "That's for Anna, not Bart.",
+          "intent": "misdirected",
+          "notes": "Explicit correction naming the intended recipient"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you cover for me tomorrow?",
+          "intent": "ambiguous",
+          "notes": "Shift coverage request, definitively human-targeted"
+        },
+        {
+          "turn": 2,
+          "text": "Wasn't asking Bart obviously, this is for Tom.",
+          "intent": "misdirected",
+          "notes": "'Obviously' signals the speaker knows it's off-target for a bot"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Do you have the login for that staging environment?",
+          "intent": "ambiguous",
+          "notes": "Credential sharing request, human-to-human"
+        },
+        {
+          "turn": 2,
+          "text": "Directed at Marcus, not Bart.",
+          "intent": "misdirected",
+          "notes": "Clean explicit correction"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey, are you joining the 3pm sync?",
+          "intent": "ambiguous",
+          "notes": "Meeting attendance question, clearly human-targeted"
+        },
+        {
+          "turn": 2,
+          "text": "That was for Priya, not the bot.",
+          "intent": "misdirected",
+          "notes": "Refers to Bart as 'the bot', explicit correction"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you double check those numbers before we send it out?",
+          "intent": "ambiguous",
+          "notes": "Pre-send review request, likely peer-to-peer"
+        },
+        {
+          "turn": 2,
+          "text": "Sorry — not for Bart, asking Chris.",
+          "intent": "misdirected",
+          "notes": "Apologetic correction, names both non-recipient and recipient"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Did anyone see my message earlier?",
+          "intent": "ambiguous",
+          "notes": "Meta-message about a prior message, group-directed"
+        },
+        {
+          "turn": 2,
+          "text": "Not asking Bart — just calling out to the channel.",
+          "intent": "misdirected",
+          "notes": "Clarifies it was a broadcast, not a bot query"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can you approve this expense report?",
+          "intent": "ambiguous",
+          "notes": "Approval workflow request, requires a human decision-maker"
+        },
+        {
+          "turn": 2,
+          "text": "That's for my manager, definitely not Bart.",
+          "intent": "misdirected",
+          "notes": "Emphatic correction — 'definitely not Bart'"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "type": "misdirected",
+      "bot_addressed": false,
+      "resolved_by_followup": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Let me know when you've pushed the changes.",
+          "intent": "ambiguous",
+          "notes": "Dev workflow coordination, peer-targeted"
+        },
+        {
+          "turn": 2,
+          "text": "For the devs, not Bart.",
+          "intent": "misdirected",
+          "notes": "Group label ('the devs') instead of individual name"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I've been a customer for three years and this is really frustrating.",
+          "intent": "indirect_request",
+          "notes": "Venting with implied request for help, no explicit ask"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Something seems off with my dashboard since the update.",
+          "intent": "indirect_request",
+          "notes": "Observation framing, implicitly asking for investigation"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I wonder if there's a faster way to do this.",
+          "intent": "indirect_request",
+          "notes": "'I wonder' framing softens a request for guidance"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Not sure if this is the right channel but my team can't access the shared workspace.",
+          "intent": "indirect_request",
+          "notes": "Hedge + problem statement = indirect but actionable"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "It would be nice if there was a way to undo that last action.",
+          "intent": "indirect_request",
+          "notes": "Wishes for a feature, implicitly asking if it exists"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "This error message doesn't tell me anything useful.",
+          "intent": "indirect_request",
+          "notes": "Complaint about UX, implicitly asking for help interpreting it"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I've tried everything and nothing is working.",
+          "intent": "indirect_request",
+          "notes": "Exhaustion signal, strong implicit request for assistance"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "There has to be a setting for this somewhere.",
+          "intent": "indirect_request",
+          "notes": "Self-directed problem-solving that invites help"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Every time I log in I have to do this manually, there's got to be a better way.",
+          "intent": "indirect_request",
+          "notes": "Repetitive friction complaint, implying a feature or workflow request"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "My colleague told me you can do X but I can't figure out how.",
+          "intent": "indirect_request",
+          "notes": "Social proof framing, implicit how-to request"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I just need this to work before my demo in two hours.",
+          "intent": "indirect_request",
+          "notes": "Urgency cue without a stated problem yet — context request implied"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "type": "indirect_request",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I'm not very technical but something in my settings changed.",
+          "intent": "indirect_request",
+          "notes": "Self-deprecating opener + observation, implies need for guided help"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey there!",
+          "intent": "conversation_starter",
+          "notes": "Pure greeting, no embedded request"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Good morning everyone.",
+          "intent": "conversation_starter",
+          "notes": "Social opener to group, no addressee"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is this the right place for support questions?",
+          "intent": "conversation_starter",
+          "notes": "Channel orientation question, not yet a request"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "type": "conversation_starter",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Oh hey Bart, didn't know you were in here.",
+          "intent": "conversation_starter",
+          "notes": "Acknowledging bot presence, no request yet"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hi! First time using this channel.",
+          "intent": "conversation_starter",
+          "notes": "New user introduction, no request embedded"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hello, I have a question.",
+          "intent": "conversation_starter",
+          "notes": "Pre-request opener, intent signal present but no content yet"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Is anyone around?",
+          "intent": "conversation_starter",
+          "notes": "Presence check before committing to a request"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "type": "conversation_starter",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, are you online?",
+          "intent": "conversation_starter",
+          "notes": "Bot availability check, no request yet"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hey quick question",
+          "intent": "conversation_starter",
+          "notes": "Preamble to a question, no content yet"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "type": "conversation_starter",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Hi, I'm not sure who to ask about this.",
+          "intent": "conversation_starter",
+          "notes": "Uncertainty about routing, invites redirection before request"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Anyone catch the game last night?",
+          "intent": "unrelated",
+          "notes": "Purely social, off-topic for support bot"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Happy Friday everyone 🎉",
+          "intent": "unrelated",
+          "notes": "Social filler, no actionable content"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Reminder: team standup at 2pm today.",
+          "intent": "unrelated",
+          "notes": "Internal team coordination, not bot-directed"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Who's ordering lunch? I want in.",
+          "intent": "unrelated",
+          "notes": "Purely social logistics, no relation to support"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "PSA: there's cake in the break room.",
+          "intent": "unrelated",
+          "notes": "Office social message, zero support relevance"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Can't believe it's already Q4.",
+          "intent": "unrelated",
+          "notes": "Casual time observation, not actionable"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Does anyone have a good restaurant rec near the office?",
+          "intent": "unrelated",
+          "notes": "Peer-to-peer social question, off-domain"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Mondays, am I right?",
+          "intent": "unrelated",
+          "notes": "Social commiseration, zero actionable content"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Just pushed the latest release, heads up everyone.",
+          "intent": "unrelated",
+          "notes": "Internal dev broadcast, may be relevant to team but not bot-directed"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "type": "unrelated",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Working from home today if anyone needs me.",
+          "intent": "unrelated",
+          "notes": "Availability notice, peer-to-peer"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "It's wild how much has changed in the last year.",
+          "intent": "abstract",
+          "notes": "Reflective statement, no clear intent or addressee"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I feel like things used to be simpler.",
+          "intent": "abstract",
+          "notes": "Vague sentiment, could precede a request but not yet one"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "type": "abstract",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, do you ever get tired of answering the same questions?",
+          "intent": "abstract",
+          "notes": "Bot-directed but not a support request — philosophical/social"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Sometimes I wonder if I'm doing this right.",
+          "intent": "abstract",
+          "notes": "Existential musing, could be work-related but no clear ask"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Honestly not sure what I expected.",
+          "intent": "abstract",
+          "notes": "Vague expression of disappointment or resignation, no specific target"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "type": "abstract",
+      "bot_addressed": true,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Bart, what do you actually know how to do?",
+          "intent": "abstract",
+          "notes": "Meta-question about bot capabilities, exploratory rather than task-oriented"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "I keep going in circles with this.",
+          "intent": "abstract",
+          "notes": "Venting without a clear problem statement or addressee"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "type": "abstract",
+      "bot_addressed": false,
+      "messages": [
+        {
+          "turn": 1,
+          "text": "Why is everything always broken on Fridays.",
+          "intent": "abstract",
+          "notes": "Rhetorical frustration, could precede a support request but not yet one"
+        }
+      ]
+    }
+  ]
+}
